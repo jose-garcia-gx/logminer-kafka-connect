@@ -29,7 +29,7 @@ class SourceConnectorConfig(
     )
 
     fun openConnection() : Connection? {
-        val dbUri = "${dbHostName}:${dbPort}/${dbSid}"
+        val dbUri = "${dbHostName}:${dbPort}:${dbSid}"
         fun doOpenConnection(): Connection {
             return DriverManager.getConnection(
                 "jdbc:oracle:thin:@$dbUri",
